@@ -1,36 +1,79 @@
-# Analytics Dashboard UI
+# Personal Portfolio
 
-A modern and responsive analytics dashboard built with HTML, CSS, and JavaScript.
+A modern and responsive personal portfolio website built to showcase my projects, skills, and experience as a frontend developer.
+
+---
+
+## About
+
+This portfolio was designed and developed to present my work in a clean, interactive, and professional way. It highlights my skills in web development, UI design, and problem-solving.
+
+---
 
 ## Features
 
-* Responsive layout (mobile + desktop)
-* Interactive charts
-* KPI cards (revenue, users, sales)
-* Sidebar navigation
-* Clean and modern UI
+* Fully responsive (mobile, tablet, desktop)
+* Modern and clean UI design
+* Smooth animations and transitions
+* Projects showcase with live demos
+* Contact section
+* Optimized performance
+
+---
 
 ## Technologies
 
 * HTML5
 * CSS3
 * JavaScript
-* Chart.js
+
+---
 
 ## Live Demo
 
-https://seu-site.vercel.app
+👉 https://seu-site.vercel.app
+
+---
 
 ## Preview
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/140a31f0-2103-4442-bde1-b36d74393c47" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ebeeb758-510d-47ca-ae41-8526d4856caa" />
 
 
-## How to Run
+---
 
-1. Download the project
-2. Open index.html in your browser
+## Projects Included
+
+* 📊 Analytics Dashboard UI
+* 🎮 Game Project
+* 🎨 UI Components
+* 🌐 Landing Page
+* 💬 Chat Interface
+
+---
+
+## What I Learned
+
+* Building responsive layouts
+* Creating modern UI/UX
+* Structuring scalable frontend projects
+* Improving performance and usability
+
+---
+
+## 📬 Contact
+
+* Email: [your@email.com](mailto:your@email.com)
+* GitHub: https://github.com/your-username
+
+---
 
 ## Author
 
 Daviasxc
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
