@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davi Augusto — Portifolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Scanlines -->
+  <div class="scanlines"></div>
+
+  <!-- Canvas background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">Daviasxc</span>
+      <span class="logo-dot">.</span>
+      <span class="logo-dev">DEV</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" data-text="HOME">HOME</a></li>
+      <li><a href="#about" data-text="ABOUT">ABOUT</a></li>
+      <li><a href="#skills" data-text="SKILLS">SKILLS</a></li>
+      <li><a href="#projects" data-text="PROJECTS">PROJECTS</a></li>
+      <li><a href="#contact" data-text="CONTACT">CONTACT</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for projects</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mobile-link">HOME</a></li>
+      <li><a href="#about" class="mobile-link">ABOUT</a></li>
+      <li><a href="#skills" class="mobile-link">SKILLS</a></li>
+      <li><a href="#projects" class="mobile-link">PROJECTS</a></li>
+      <li><a href="#contact" class="mobile-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-prefix">// </span>
+        <span class="tag-text" id="tagTyper"></span>
+        <span class="tag-cursor">|</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="name-line" data-glitch="DAVI">DAVI</span>
+        <span class="name-line accent" data-glitch="AUGUSTO">AUGUSTO</span>
+      </h1>
+
+      <div class="hero-role">
+        <span class="role-prefix">&lt;</span>
+        <span class="role-text" id="roleTyper"></span>
+        <span class="role-suffix"> /&gt;</span>
+      </div>
+
+         <p class="hero-desc">
+     Front-end developer, graphic designer, and programmer.<br />
+     Passionate about technology, building digital experiences, and growing in the IT field.
+    </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <span class="btn-text">VER PROJETOS</span>
+          <span class="btn-glitch">VER PROJETOS</span>
+          <div class="btn-scan"></div>
+        </a>
+        <a href="#contact" class="btn-secondary">CONTACT →</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-count="12">0</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Anos exp.</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-num" data-count="40">0</span>
+          <span class="stat-label">Commits/mês</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-core">
+          <div class="avatar-hex">
+            <svg viewBox="0 0 200 200" class="hex-svg">
+              <defs>
+                <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#630000;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#b10000;stop-opacity:1" />
+                </linearGradient>
+                <clipPath id="hexClip">
+                  <polygon points="100,10 182,55 182,145 100,190 18,145 18,55" />
+                </clipPath>
+              </defs>
+              <polygon points="100,10 182,55 182,145 100,190 18,145 18,55"
+                fill="none" stroke="url(#hexGrad)" stroke-width="2" />
+              <polygon points="100,10 182,55 182,145 100,190 18,145 18,55"
+                fill="#0a0a1a" opacity="0.9" />
+              <text x="100" y="95" text-anchor="middle" font-family="Orbitron" font-size="23" font-weight="900" fill="url(#hexGrad)">DAVIASXC</text>
+              <text x="100" y="140" text-anchor="middle" font-family="Rajdhani" font-size="15" fill="#00f5ff" letter-spacing="4">DEV</text>
+            </svg>
+          </div>
+        </div>
+        <div class="orbit-dot orbit-1"></div>
+        <div class="orbit-dot orbit-2"></div>
+        <div class="orbit-dot orbit-3"></div>
+      </div>
+
+      <div class="floating-cards">
+        <div class="f-card" style="--delay:0s;--x:-120px;--y:-60px">
+          
+          <span>Web</span>
+        </div>
+        <div class="f-card" style="--delay:0.5s;--x:100px;--y:-80px">
+          
+          <span>Apps</span>
+        </div>
+        <div class="f-card" style="--delay:1s;--x:-90px;--y:100px">
+          
+          <span>Games</span>
+        </div>
+        <div class="f-card" style="--delay:1.5s;--x:110px;--y:90px">
+         
+          <span>Design</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">ABOUT ME</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">~/daviasxc/profile.json</span>
+          </div>
+          <div class="terminal-body">
+            <pre class="terminal-code" id="terminalCode"></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <h3 class="about-heading">
+          My experience with<br />
+          <span class="text-gradient">Information Technology</span>
+        </h3>
+        <p class="about-text">
+          Frontend Developer with <strong>3 years</strong> building projects  <em>both for fun and real-world applications.</em>
+        </p>
+        <p class="about-text">
+          I'm passionate about technology, animations, and crafting software that feels unique. I believe every pixel matters, every millisecond counts, and every interaction should have purpose and soul.
+        </p>
+        <p class="about-text">
+          When I'm not coding, I'm learning, playing indie games, or watching anime and series — constantly bringing inspiration from these experiences into my work.
+        </p>
+
+        <div class="about-tags">
+          <span class="tag">🇧🇷 Rio de Janeiro, BR</span>
+          <span class="tag">🎓 IT Technical</span>
+          <span class="tag">🌙 Night Coder</span>
+          <span class="tag">🤓 Inspired by geek and nerd culture</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">SKILLS STACK</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-categories">
+        <button class="skill-cat active" data-cat="frontend">FRONTEND</button>
+        <button class="skill-cat" data-cat="backend">BACKEND</button>
+        <button class="skill-cat" data-cat="tools">TOOLS</button>
+        <button class="skill-cat" data-cat="design">DESIGN</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="skills-radar">
+        <canvas id="radarChart" width="400" height="400"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="web">WEB/APP</button>
+      <button class="filter-btn" data-filter="game">GAME</button>
+      <button class="filter-btn" data-filter="3d">DESIGN</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">EXPERIENCE</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-track"></div>
+
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <span class="tc-date">2024 — PRESENT</span>
+            <span class="tc-badge">Dev</span>
+          </div>
+          <h3 class="tc-role">Software Developer</h3>
+          <p class="tc-company">// PERSONAL PROJECTS & STUDIES</p>
+          <p class="tc-desc">Development of practical projects focused on frontend and programming fundamentals. Building modern, responsive, and interactive interfaces. Continuous learning of best practices, logic, and performance, aiming for professional-level skills.</p>
+          <div class="tc-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GIT</span><span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-side="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <span class="tc-date">2023 — 2024</span>
+            <span class="tc-badge">MID</span>
+          </div>
+          <h3 class="tc-role">Frontend Developer</h3>
+          <p class="tc-company">// STUDIES & PRACTICE</p>
+          <p class="tc-desc">First contact with web development. Built simple pages and basic applications while exploring core concepts such as responsiveness, DOM manipulation, and code organization.</p>
+          <div class="tc-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <span class="tc-date">2022 — 2023</span>
+            <span class="tc-badge">BEGINNER</span>
+          </div>
+          <h3 class="tc-role">Introduction to Programming</h3>
+          <p class="tc-company">// START IN TECH</p>
+          <p class="tc-desc">Learned programming fundamentals and logic. Initial exposure to technology through a technical high school program, building a strong foundation for a career in software development.</p>
+          <div class="tc-tags">
+            <span>IT Fundamentals</span><span>Algorithms</span><span>Programming Logic</span><span>Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">CONTACT</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h3 class="contact-heading">
+          Let's create something<br />
+          <span class="text-gradient">amazing together?</span>
+        </h3>
+        <p class="contact-desc">
+          Open to freelance work, projects, or just talking about technology. If you have an idea that needs to come to life, I can help you.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:daviaugustosoutocerqueira@gmail.com" class="contact-link">
+            <span class="cl-icon">📧</span>
+            <span class="cl-label">EMAIL</span>
+            <span class="cl-value">daviaugustosoutocerqueira@gmail.com</span>
+            <span class="cl-arrow">→</span>
+          </a>
+          <a href="https://linktr.ee/Daviasxc" class="contact-link">
+            <span class="cl-icon">📲</span>
+            <span class="cl-label">SOCIAL MEDIA</span>
+            <span class="cl-value">linktr.ee/Daviasxc</span>
+            <span class="cl-arrow">→</span>
+          </a>
+          <a href="https://github.com/Daviasxc" class="contact-link">
+            <span class="cl-icon">🐙</span>
+            <span class="cl-label">GITHUB</span>
+            <span class="cl-value">github.com/Daviasxc</span>
+            <span class="cl-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label class="form-label">NAME</label>
+            <input type="text" class="form-input" placeholder="Your name" id="formName" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">EMAIL</label>
+            <input type="email" class="form-input" placeholder="your@email.com" id="formEmail" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">MESSAGE</label>
+            <textarea class="form-input form-textarea" placeholder="Tell me about your project..." id="formMsg"></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            <span class="btn-text">SEND MESSAGE</span>
+            <span class="btn-glitch">SEND MESSAGE</span>
+            <div class="btn-scan"></div>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span>✓ Message sent! I'll get back to you soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+ <footer>
+  <div class="footer-line"></div>
+  <div class="footer-content">
+    <span class="footer-logo">DAVIASXC</span>
+    <span class="footer-copy">© 2026 Davi — Built with 🖤, ☕ & 🎵</span>
+    <span class="footer-version">v2.4.1</span>
+  </div>
+</footer>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
