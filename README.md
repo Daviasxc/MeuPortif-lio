@@ -31,7 +31,7 @@ This portfolio was designed and developed to present my work in a clean, interac
 
 ## Live Demo
 
-👉 [https://portifolio.vercel.app](https://portfolio-website-rust-iota-20.vercel.app/)
+👉 [[https://portifolio.vercel.app](https://portfolio-website-rust-iota-20.vercel.app/)
 
 ---
 
