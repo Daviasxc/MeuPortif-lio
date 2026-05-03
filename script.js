@@ -483,14 +483,21 @@ function drawRadar(cat) {
 // ==================== PROJECTS ====================
 const projects = [
   {
-    id: 1, title: 'NEXUS DASHBOARD', type: 'web', featured: true,
-    desc: 'Dashboard de analytics em tempo real com WebGL e dados ao vivo. 60fps garantidos.',
-    tech: ['React', 'WebGL', 'GraphQL', 'WebSocket'],
-    color: '#00c3ff', icon: '📊', bg: 'linear-gradient(135deg, #0a0a1a 0%, #0d1f3a 100%)',
-    detail: 'Sistema completo de analytics com visualizações 3D, gráficos em tempo real via WebSocket, e uma interface que parece saída de um sci-fi. Redução de 70% no tempo de carregamento de dados.',
-  },
+  id: 1,
+  title: 'ANALYTICS DASHBOARD',
+  type: 'web',
+  featured: true,
+  demo: 'https://analytic-dashboard-mu.vercel.app',
+  desc: 'Modern analytics dashboard with interactive charts, search, notifications, and CSV export features.',
+  tech: ['HTML', 'CSS', 'JavaScript', 'Chart.js'],
+  color: '#00c3ff',
+  icon: '📊',
+  bg: 'linear-gradient(135deg, #0a0a1a 0%, #0d1f3a 100%)',
+  detail: 'A fully responsive analytics dashboard designed to simulate a real-world admin panel. Includes dynamic data visualization, search with debounce, notification system, and data export functionality, focusing on clean UI and smooth user experience.',
+},
   {
     id: 2, title: 'VOID RUNNER', type: 'game',
+    demo: 'https://example.com/void-runner',
     desc: 'Jogo de plataforma no browser com engine própria em Canvas 2D. 120fps.',
     tech: ['Canvas 2D', 'Web Audio', 'JavaScript'],
     color: '#ffe600', icon: '🎮', bg: 'linear-gradient(135deg, #1a0a00 0%, #2a1a00 100%)',
@@ -498,13 +505,15 @@ const projects = [
   },
   {
     id: 3, title: 'SAKURA UI', type: 'web',
+    demo: 'https://example.com/sakura-ui',
     desc: 'Design system completo com 80+ componentes animados. Usado em 12 projetos.',
     tech: ['TypeScript', 'SCSS', 'Storybook'],
     color: '#ff006e', icon: '🌸', bg: 'linear-gradient(135deg, #1a0010 0%, #2a0020 100%)',
     detail: 'Design system inspirado em anime com 80+ componentes, sistema de temas, acessibilidade WCAG AA, documentação interativa e bundle de 12kb gzipped.',
   },
   {
-    id: 4, title: 'NEON WORLD', type: '3d',
+    id: 4, title: 'NEON WORLD', type: 'Design',
+    demo: 'https://example.com/neon-world',
     desc: 'Mundo 3D interativo no browser com Three.js. 150k+ usuários únicos.',
     tech: ['Three.js', 'GLSL', 'React'],
     color: '#7b2fff', icon: '🌐', bg: 'linear-gradient(135deg, #0a001a 0%, #1a0030 100%)',
@@ -512,6 +521,7 @@ const projects = [
   },
   {
     id: 5, title: 'CIPHER CHAT', type: 'web',
+    demo: 'https://example.com/cipher-chat',
     desc: 'App de chat criptografado com UI em tempo real e animações fluidas.',
     tech: ['Vue.js', 'Socket.io', 'Node.js'],
     color: '#00ff88', icon: '💬', bg: 'linear-gradient(135deg, #001a0a 0%, #002a10 100%)',
@@ -565,6 +575,13 @@ function initProjects() {
         if (btn && btn.dataset.action === 'details') {
           const id = +btn.dataset.id;
           openModal(projects.find(p => p.id === id));
+        }
+        if (btn && btn.dataset.action === 'live') {
+          const id = +c.dataset.id;
+          const project = projects.find(p => p.id === id);
+          if (project?.demo) {
+            window.open(project.demo, '_blank', 'noopener,noreferrer');
+          }
         }
       });
     });
