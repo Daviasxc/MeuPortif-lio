@@ -63,8 +63,8 @@ This portfolio was designed and developed to present my work in a clean, interac
 
 ## 📬 Contact
 
-* Email: [your@email.com](mailto:your@email.com)
-* GitHub: https://github.com/your-username
+* Email: [daviaugustosoutocerqueira@email.com](mailto:daviaugustosoutocerqueira@email.com)
+* GitHub: https://github.com/Daviasxc
 
 ---
 
